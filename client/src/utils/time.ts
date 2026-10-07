@@ -1,0 +1,1 @@
+export function formatTime(t:number){return new Intl.DateTimeFormat(undefined,{hour:"numeric",minute:"2-digit"}).format(t)}

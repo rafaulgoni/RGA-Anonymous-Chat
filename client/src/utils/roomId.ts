@@ -1,0 +1,1 @@
+export function participantId(){return crypto.randomUUID()} export function roomUrl(id:string){return `${location.origin}/chat/${id}`}

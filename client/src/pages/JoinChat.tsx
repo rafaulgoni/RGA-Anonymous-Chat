@@ -1,0 +1,1 @@
+import {useEffect} from "react";import {useNavigate,useParams} from "react-router-dom";export function JoinChat(){const{id}=useParams(),n=useNavigate();useEffect(()=>{n(`/chat/${id}`,{replace:true})},[id]);return <main className="grid min-h-screen place-items-center bg-slate-950 text-slate-400">Joining chat...</main>}

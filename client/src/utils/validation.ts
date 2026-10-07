@@ -1,0 +1,3 @@
+import {APP_CONFIG} from "../config/app";
+export function textError(x:string){if(!x.trim())return"Message cannot be empty.";if(x.trim().length>APP_CONFIG.maxMessageLength)return`Message is limited to ${APP_CONFIG.maxMessageLength} characters.`;return null}
+export function fileError(f:File,k:"image"|"video"|"voice"){const max=k==="image"?APP_CONFIG.maxImageSize:k==="video"?APP_CONFIG.maxVideoSize:APP_CONFIG.maxVoiceSize;if(f.size>max)return"File size is too large.";if(k==="image"&&!f.type.startsWith("image/"))return"Unsupported file type.";if(k==="video"&&!f.type.startsWith("video/"))return"Unsupported file type.";return null}

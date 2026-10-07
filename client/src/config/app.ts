@@ -1,0 +1,1 @@
+export const APP_CONFIG={name:"RGA Anonymous Chat",maxGroupMembers:20,maxMessageLength:2000,maxImageSize:5*1024*1024,maxVideoSize:15*1024*1024,maxVoiceSize:5*1024*1024,reconnectAttempts:8,reconnectDelayMs:1500} as const;
